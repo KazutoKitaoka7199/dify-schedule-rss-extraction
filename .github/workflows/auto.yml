@@ -1,8 +1,10 @@
 name: Auto
 
 on:
-  schedule:
-    - cron: "*/30 * * * *" # 30分に1回実行
+  repository_dispatch:
+    types: [on-demand-test]
+  # schedule:
+   # - cron: "*/30 * * * *" # 30分に1回実行
   workflow_dispatch:
 
 env:
